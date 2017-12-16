@@ -1,0 +1,3 @@
+.container{padding-left:10px;padding-right:10px}.row{margin-left:-10px;margin-right:-10px}.row:after{content:'';display:table;clear:both}.row [class*="col-"]{width:100%;padding:0 10px;box-sizing:border-box;margin-bottom:20px}@media (min-width: 720px){.row [class*="col-"]{float:left}.row .col-1-12{width:8.33333%}.row .col-2-12{width:16.66667%}.row .col-3-12{width:25%}.row .col-4-12{width:33.33333%}.row .col-5-12{width:41.66667%}.row .col-6-12{width:50%}.row .col-7-12{width:58.33333%}.row .col-8-12{width:66.66667%}.row .col-9-12{width:75%}.row .col-10-12{width:83.33333%}.row .col-11-12{width:91.66667%}.row .col-12-12{width:100%}}strong{display:block;height:100px;background:red}
+
+/*# sourceMappingURL=main.css.map */

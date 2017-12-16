@@ -1,0 +1,20 @@
+@import "_header.scss";
+
+$color : rgb(121, 41, 41);
+$color2 : rgb(21, 128, 96);
+$color3 : rgb(196, 224, 34);
+$height : 500px;
+
+body {
+    background: $color;
+    height: $height;
+    margin: 30px;
+    color: $color2;
+}
+.txt {
+    display: inline-block;
+    width: $height;
+    height: $height;
+    background-color: $color3;
+
+}

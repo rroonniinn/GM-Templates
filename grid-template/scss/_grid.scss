@@ -1,0 +1,88 @@
+//to mój piękny kod - idąć od dużego do małego, poniżej jest modyfikacja Marcina idąc od mobile first
+
+// $padding: 10px;
+
+// .container {
+// //usunięcie bocznych marginów wywołało scroll poziommy, tym go usuwamy:
+// padding-left:10px; 
+// padding-right:10px;
+
+// }
+
+// //clear fix na pozimie row-a
+// .row {
+//     //usunięcie bocznych marginów 
+//     margin-left: -10px;
+//     margin-right: -10px;
+
+//     &:after{
+//         content: '';
+//         display: table;
+//         clear: both;
+//     }
+
+    
+    
+
+//     //wyszukiwanie po atrybucie
+//     [class*="col-"] {
+//         float: left;
+//         padding: 0 10px;;
+//         box-sizing: border-box;
+//         margin-bottom: 20px; 
+//     }
+
+//     //pętla budująca wszystkie klasy dla col-1-12 / col-2-12 .... col-12-12
+//     @for $i from 1 through 12 {
+//     .col-#{$i}-12 {
+//         width: ((100/12)*$i)*1%;
+
+//     }
+
+// }
+//     @media (max-width:720px) {
+//         [class*="col-"] {
+//             float: none;
+//             width: 100%
+//         }
+
+//     }
+
+// }
+$column: 12;
+$gap: 10px;
+$breakpoint: 720px;
+
+.container {
+    padding-left:$gap;
+    padding-right:$gap;
+}
+.row {
+    margin-left:-$gap;
+    margin-right:-$gap;
+
+    &:after {
+        content:'';
+        display: table;
+        clear:both;
+    }
+
+    [class*="col-"] {
+        width:100%;
+        padding:0 $gap;
+        box-sizing:border-box;
+        margin-bottom: 2*$gap;
+    }
+
+    @media (min-width:#{$breakpoint}) {
+        [class*="col-"] {
+            float:left;
+        }
+
+        @for $i from 1 through $column {
+            .col-#{$i}-#{$column} {
+                width: ((100/$column)*$i)*1%;
+            }
+        }
+    }
+}
